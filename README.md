@@ -36,8 +36,9 @@ The value of an aircraft over time is heavily dependent on its maintenance condi
 
 On a component basis, to generate the maintenance adjustment an accurate assessment of 1) where each major maintenance event is relative to their last and next shop visit, and 2) what percentage of its next shop visit cost is remaining. For 1), this is determined by the aircraft operation which is a projection of future monthly FH and FC and 2) event cost is based on aircraft technical specifications corresponding to the component and data published by OEMs regarding costs.
 
-An aircraft’s half-life adjustment value can be quantified using the following equation. This graph follows a typical saw-tooth pattern.
-Adjustment from Half-Life = (Mtx Event % Life Remaining – 50%) * (Mtx Event Cost)
+An aircraft’s half-life adjustment value can be quantified using the following equation. This utility cycle follows a saw-tooth pattern.
+
+**Adjustment from Half-Life = (Mtx Event % Life Remaining – 50%) * (Mtx Event Cost)**
 
 The half-life basis assumes that the airframe, engines, landing gear and all major components are half-way between major overhauls and that any life-limited part (for example an engine disk) has used up half of its life.
 
