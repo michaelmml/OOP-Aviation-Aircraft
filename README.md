@@ -6,7 +6,7 @@ Object-oriented programming in aviation; graphs and network optimisation for rou
 * [Routes and Networks](#routes-and-networks)
 
 ## Maintenance Cycle Modelling
-Aggregate of the following components and % life based on flight cycle (FC) or flight hour (FH) limits. Input at an asset class level for general pricing and component limits and also at an asset-specific level for current status of components. They driven flyforward on the five key components - Airframe, APU, Landing Gear, Engine Performance Restoration x 2 and LLPs x 2.
+The value of an aircraft over time is heavily dependent on its maintenance condition and therefore the cost of the maintenance events. This is aggregated based on the main components and % life with respect to each flight cycle (FC) / flight hour (FH) / age limits. Input at an asset class level for general costs and component limits and also at an asset-specific level for current status. They drive flyforward on - Airframe, APU, Landing Gear, Engine Performance Restoration x 2 and LLPs x 2. LLPs can be further broken down into several groupings with slightly different cycle limits.
 
 ```
     def utilise(self):
@@ -33,6 +33,13 @@ Aggregate of the following components and % life based on flight cycle (FC) or f
         else:
             self.ratio_2 = (self.fh_cum - self.r2_cumevent) / threshold[self.r2][2]
 ```
+
+On a component basis, to generate the maintenance adjustment an accurate assessment of 1) where each major maintenance event is relative to their last and next shop visit, and 2) what percentage of its next shop visit cost is remaining. For 1), this is determined by the aircraft operation which is a projection of future monthly FH and FC and 2) event cost is based on aircraft technical specifications corresponding to the component and data published by OEMs regarding costs.
+
+An aircraft’s half-life adjustment value can be quantified using the following equation. This graph follows a typical saw-tooth pattern.
+Adjustment from Half-Life = (Mtx Event % Life Remaining – 50%) * (Mtx Event Cost)
+
+The half-life basis assumes that the airframe, engines, landing gear and all major components are half-way between major overhauls and that any life-limited part (for example an engine disk) has used up half of its life.
 
 ![flyforwards](https://user-images.githubusercontent.com/84533632/123513884-a0b3d080-d687-11eb-9e3a-1d06bfd4bcfa.png)
 
