@@ -1,3 +1,4 @@
+![flyforwards](https://user-images.githubusercontent.com/84533632/123546836-3cac0d80-d756-11eb-81f3-a5fc9bbb10c5.png)
 # OOP Aviation & Aircraft
 Object-oriented programming in aviation; graphs and network optimisation for routes and aircraft utilisation / maintenance forecasting
 
@@ -35,3 +36,7 @@ Aggregate of the following components and % life based on flight cycle (FC) or f
 ```
 
 ![flyforwards](https://user-images.githubusercontent.com/84533632/123513884-a0b3d080-d687-11eb-9e3a-1d06bfd4bcfa.png)
+
+With additional expansion of the model to break down LLPs by three cycle limit groups.
+
+![flyforwards](https://user-images.githubusercontent.com/84533632/123546838-3fa6fe00-d756-11eb-9b3d-c2f8495edc3d.png)
