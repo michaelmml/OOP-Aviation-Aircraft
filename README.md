@@ -1,4 +1,3 @@
-![flyforwards](https://user-images.githubusercontent.com/84533632/123546836-3cac0d80-d756-11eb-81f3-a5fc9bbb10c5.png)
 # OOP Aviation & Aircraft
 Object-oriented programming in aviation; graphs and network optimisation for routes and aircraft utilisation / maintenance forecasting
 
